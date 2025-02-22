@@ -1,0 +1,118 @@
+.inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+body {
+    margin: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #273549;
+    font-size: 1em;
+
+}
+.error-msg {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 34em;
+    display: flex;
+    flex-direction: column;
+
+  
+}
+
+    .unit_insert {
+        background-color: #6943FF;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        padding-bottom: 2em;
+    }
+
+
+    .unit_transform {
+        background-color: #F4F4F4;
+        direction: flex;
+    }
+
+    .unit {
+        font-family: "Inter", serif;
+        color: #5A537B;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5em;
+
+    }
+/* text */
+
+p {
+    color: #353535;
+    font-size: 14px;
+}
+
+#message-el {
+
+    padding: 2em;
+    border-radius: 2em;
+    font-family: "Inter", serif;
+    font-weight: 800;
+    color: rgb(238, 204, 10);
+
+}
+
+
+
+
+
+/* input */
+#input-el{
+    font-family: "Inter", serif;
+    font-weight: 800;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 58;
+    max-width: 4em;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: #1c9470 solid 0.01em;
+    border-radius: 0.1em;
+}
+/* button */
+#convert-el {
+    width: 7em;
+    height: 2.6em;
+    font-family: "Inter", serif;
+    font-weight: 800;
+    background-color: #FFFFFF;
+    color: #3D3D3D;
+    /* padding: 1em  2em; */
+    border-radius: 0.5em;
+    border: none;
+
+}
+#convert-el:hover {
+    background-color: #612b72;
+    color: #FFFFFF;
+}
+
+
+.border {
+    border: 1px dotted red;
+}
