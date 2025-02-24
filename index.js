@@ -4,21 +4,43 @@
 1 kilogram = 2.204 pound
 */
 
-// <input id="input-el" type="text">
-// <button id="convert-el">CONVERT</button>
 
 
-// <p id="length-el">Insert text | Insert text</p>
-// <p id="length-el">Insert text | Insert text</p>
-// <p id="length-el">Insert text | Insert text</p>
 
-const inputNumber = document.getElementById("input-el")
+const inputNumber = document.getElementById("span-el")
 const convertBtn = document.getElementById("convert-el")
 const lengthEl = document.getElementById("length-el")
 const volumeEl = document.getElementById("volume-el")
 const massEl = document.getElementById("kilogram-el")
 const messageEl = document.getElementById("message-el")
 
+const toggleBtn = document.getElementById("toggle-el")
+const theme = window.localStorage.getItem("theme") 
+
+
+// toggleBtn.innerHTML = ""
+
+// if(theme === "dark") {
+//     document.body.classList.add("dark")
+//     toggleBtn.innerHTML = "Dark"
+// } else {
+//     toggleBtn.innerHTML = "White"
+// }
+
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark")
+    if(theme === "dark") {
+        window.localStorage.setItem("theme", "light")
+    } else {
+        window.localStorage.setItem("theme", "dark")
+    }
+})
+
+// refresh.addEventListener("click", ()=> {
+//     window.location.reload()
+// }
+// )
 
 convertBtn.addEventListener( "click", function() {
     messageEl.innerHTML = ""
