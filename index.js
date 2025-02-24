@@ -5,42 +5,38 @@
 */
 
 
-
-
-const inputNumber = document.getElementById("span-el")
+const inputNumber = document.getElementById("input-el")
 const convertBtn = document.getElementById("convert-el")
 const lengthEl = document.getElementById("length-el")
 const volumeEl = document.getElementById("volume-el")
 const massEl = document.getElementById("kilogram-el")
 const messageEl = document.getElementById("message-el")
 
-const toggleBtn = document.getElementById("toggle-el")
-const theme = window.localStorage.getItem("theme") 
+const themeSwitch = document.getElementById("theme-switch")
+let darkMode = localStorage.getItem("darkmode") 
 
 
-// toggleBtn.innerHTML = ""
+// enables darkmode by creating into the body the class darkmode that is defined in CSS
+const enableDarkmode = () => {
+    document.body.classList.add("darkmode")
+    // stores the darkmode css style feature in localStorage as 'active'
+    localStorage.setItem("darkmode", 'active')
+}
 
-// if(theme === "dark") {
-//     document.body.classList.add("dark")
-//     toggleBtn.innerHTML = "Dark"
-// } else {
-//     toggleBtn.innerHTML = "White"
-// }
+// disable darkmode by removing the class from the body
+const disableDarkmode = () => {
+    document.body.classList.remove("darkmode")
+    //stores under the darkmode const from localStorage the 'null' value that resets the darkmode
+    localStorage.setItem("darkmode", null)
+}
 
+if(darkMode === 'active') enableDarkmode()
 
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark")
-    if(theme === "dark") {
-        window.localStorage.setItem("theme", "light")
-    } else {
-        window.localStorage.setItem("theme", "dark")
+themeSwitch.addEventListener("click", () => {
+    darkMode = localStorage.getItem("darkmode")
+    darkMode !== "active" ? enableDarkmode() : disableDarkmode()
     }
-})
-
-// refresh.addEventListener("click", ()=> {
-//     window.location.reload()
-// }
-// )
+)
 
 convertBtn.addEventListener( "click", function() {
     messageEl.innerHTML = ""
@@ -72,7 +68,6 @@ convertBtn.addEventListener( "click", function() {
     finally {
         document.getElementById("message-el").value= ""
     }
-        // 
-                        }
+   }
 )
  

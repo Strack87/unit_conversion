@@ -38,7 +38,7 @@ body {
 
 }
 
-.dark{
+.darkmode {
     --bg-text-unit-white: #CCC1FF;
     --bg-p-white: #FFFFFF;
 
@@ -135,7 +135,7 @@ p {
 }
 /* button */
 
-#toggle-el {
+#theme-switch {
     background-color: var(--bg-toggle-white);
     /* color: var(--bg-text-unit-white); */
     border: none;
@@ -150,15 +150,15 @@ p {
     right: 1em;
 
 }
-#toggle-el img:last-child{
+#theme-switch img:last-child{
     display: none;
 }
 
-.dark #toggle-el img:first-child {
+.darkmode #theme-switch img:first-child {
     display: none;
 }
 
-.dark #toggle-el img:last-child {
+.darkmode #theme-switch img:last-child {
     display: block;
 }
 

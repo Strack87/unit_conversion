@@ -17,7 +17,7 @@ The Unit Conversion App is a web application designed to convert between metric 
 
 ## CSS
 The CSS styles are defined in the [index.css](index.css) file. Key styles include:
-- **Layout**: Flexbox is used to center and align elements.
+- **Layout**: Flex box is used to center and align elements.
 - **Colors**: Background and text colors are chosen to provide a visually appealing interface.
 - **Fonts**: The "Inter" font is used for text elements.
 - **Responsive Design**: The layout adjusts to different screen sizes.
